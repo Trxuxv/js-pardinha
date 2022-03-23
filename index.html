@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Treinment</title>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="row">
+            <div class="flex-item">
+                <div class="btn-event">
+                    <button id="btn" type="button">button</button>
+                    <p id="msg">*action*</p>
+                </div>
+                <div class="image">
+                    <img id="myImg" src="click.jpg">
+                </div>
+                <div class="input">
+                    <input type="text" id="ur_name" placeholder="quem é vc?" />
+                    <button onclick="vamos()">submit</button>
+                    <p id="msg-input"></p>
+                </div>
+                <div class="input">
+                    <input type="text" id="ur_birth" placeholder="q dia vc nasceu??" />
+                    <button onclick="birth()">submit</button>
+                    <p id="msg-birth"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<style>
+    /* width */
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px black;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: red;
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #b30000;
+    }
+
+    html,
+    body {
+        height: 100%;
+        background-color: black;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .flex-container {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .row {
+        width: auto;
+        border: 1px solid white;
+    }
+
+    .flex-item {
+        font-size: 0.9em;
+        background-color: black;
+        padding: 5px;
+        width: 500px;
+        overflow-y: scroll;
+        height: 500px;
+        margin: 10px;
+        line-height: 20px;
+        color: #56f74a;
+        text-align: center;
+    }
+
+    img {
+        max-width: 450px;
+    }
+
+    input {
+        margin-top: 5%;
+    }
+</style>
+<script>
+    var action = window.document.getElementById('msg')
+    var btn = window.document.getElementById('btn')
+    var msg_input = window.document.getElementById('msg-input')
+    var msg_birth = window.document.getElementById('msg-birth')
+
+    btn.addEventListener('click', clicar)
+    btn.addEventListener('mouseenter', enter)
+    btn.addEventListener('mouseout', out)
+
+    function clicar() {
+        btn.innerText = 'Clicked'
+        action.innerText = '*clicked*'
+        btn.style.background = 'red';
+        document.getElementById("myImg").src = "clicked.jpg";
+    }
+
+    function enter() {
+        btn.innerText = 'entered'
+        action.innerText = '*entered*'
+        document.getElementById("myImg").src = "entered.jpg";
+    }
+
+
+    function out() {
+        btn.innerText = 'button';
+        action.innerText = '*out of *';
+        btn.style.background = 'white';
+        document.getElementById("myImg").src = "out.jpg";
+    }
+
+    function vamos() {
+        let name = document.getElementById("ur_name").value
+        switch (name) {
+            case 'pardinha':
+                msg_input.innerText = 'awwnn oii, pardinha :c tih amuuh'
+
+                break;
+            case 'vic':
+                msg_input.innerText = 'nnnnn'
+                break;
+            default:
+                msg_input.innerText = 'vc erro :/'
+                    ;
+        }
+    }
+
+    function birth() {
+        let name = document.getElementById("ur_birth").value
+        switch (name) {
+            case "29/04/2004":
+            case '29/04':
+                msg_birth.innerText = 'awwnn :c , o dia do nascimento do bebe'
+                break;
+            case 'vic':
+                msg_birth.innerText = 'nnnnn'
+                break;
+            default:
+                msg_birth.innerText = 'vc erro :/'
+                    ;
+        }
+    }
+</script>
