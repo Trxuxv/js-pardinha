@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Treinment</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
 </head>
+
 <body>
     <div class="flex-container">
         <div class="row">
@@ -26,74 +27,47 @@
                     <button onclick="birth()">submit</button>
                     <p id="msg-birth"></p>
                 </div>
-
+                <br>
+                <div class="image">
+                    <img id="myImg" src="math.png">
+                </div>
+                <br>
+                <div class="calculator">
+                    <div class="input">
+                    </div>
+                    <br>
+                    <div class="numbers">
+                        <h4>Calculator</h4>
+                        <div class="camp">
+                            <div data-previous-operand class="previous-operand"></div>
+                            <div data-current-operand class="current-operand"></div>
+                        </div>
+                        <br>
+                        <button class="numb" data-all-clear class="span-two">AC</button>
+                        <button class="numb" data-delete>DEL</button>
+                        <button class="numb" data-operation>÷</button>
+                        <br>
+                        <button class="numb" data-number>1</button>
+                        <button class="numb" data-number>2</button>
+                        <button class="numb" data-number>3</button>
+                        <button class="numb" data-operation>*</button>
+                        <button class="numb" data-number>4</button>
+                        <button class="numb" data-number>5</button>
+                        <button class="numb" data-number>6</button>
+                        <button class="numb" data-operation>+</button>
+                        <button class="numb" data-number>7</button>
+                        <button class="numb" data-number>8</button>
+                        <button class="numb" data-number>9</button>
+                        <button class="numb" data-operation>-</button>
+                        <button class="numb" data-number>.</button>
+                        <button class="numb" data-number>0</button>
+                        <button class="numb" data-equals class="span-two">=</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
-<script>
-    var action = window.document.getElementById('msg')
-    var btn = window.document.getElementById('btn')
-    var msg_input = window.document.getElementById('msg-input')
-    var msg_birth = window.document.getElementById('msg-birth')
-
-    btn.addEventListener('click', clicar)
-    btn.addEventListener('mouseenter', enter)
-    btn.addEventListener('mouseout', out)
-
-    function clicar() {
-        btn.innerText = 'Clicked'
-        action.innerText = '*clicked*'
-        btn.style.background = 'red';
-        document.getElementById("myImg").src = "clicked.jpg";
-    }
-
-    function enter() {
-        btn.innerText = 'entered'
-        action.innerText = '*entered*'
-        document.getElementById("myImg").src = "entered.jpg";
-    }
-
-
-    function out() {
-        btn.innerText = 'button';
-        action.innerText = '*out of *';
-        btn.style.background = 'white';
-        document.getElementById("myImg").src = "out.jpg";
-    }
-
-    function vamos() {
-        let name = document.getElementById("ur_name").value
-        switch (name) {
-            case 'pardinha':
-                msg_input.innerText = 'awwnn oii, pardinha :c tih amuuh'
-
-                break;
-            case 'vic':
-                msg_input.innerText = 'nnnnn'
-                break;
-            default:
-                msg_input.innerText = 'vc erro :/'
-                    ;
-        }
-    }
-
-    function birth() {
-        let name = document.getElementById("ur_birth").value
-        switch (name) {
-            case "29/04/2004":
-            case '29/04':
-                msg_birth.innerText = 'awwnn :c , o dia do nascimento do bebe'
-                break;
-            case 'vic':
-                msg_birth.innerText = 'nnnnn'
-                break;
-            default:
-                msg_birth.innerText = 'vc erro :/'
-                    ;
-        }
-    }
-</script>
+<script src="index.js"></script>
