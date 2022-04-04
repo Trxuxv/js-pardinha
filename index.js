@@ -38,6 +38,9 @@ function vamos() {
         case 'vic':
             msg_input.innerText = 'nnnnn'
             break;
+        case '':
+            msg_input.innerText = 'vc num digito nd o.O'
+            break;
         default:
             msg_input.innerText = 'vc erro :/'
                 ;
@@ -53,6 +56,9 @@ function birth() {
             break;
         case 'vic':
             msg_birth.innerText = 'nnnnn'
+            break;
+        case '':
+            msg_birth.innerText = 'vc num digito nd o.O'
             break;
         default:
             msg_birth.innerText = 'vc erro :/'
