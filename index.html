@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Treinment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
-
 <body>
     <div class="flex-container">
         <div class="row">
@@ -34,74 +34,6 @@
 </body>
 
 </html>
-<style>
-    /* width */
-    ::-webkit-scrollbar {
-        width: 15px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px black;
-        border-radius: 10px;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: red;
-        border-radius: 10px;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #b30000;
-    }
-
-    html,
-    body {
-        height: 100%;
-        background-color: black;
-    }
-
-    body {
-        margin: 0;
-    }
-
-    .flex-container {
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .row {
-        width: auto;
-        border: 1px solid white;
-    }
-
-    .flex-item {
-        font-size: 0.9em;
-        background-color: black;
-        padding: 5px;
-        width: 500px;
-        overflow-y: scroll;
-        height: 500px;
-        margin: 10px;
-        line-height: 20px;
-        color: #56f74a;
-        text-align: center;
-    }
-
-    img {
-        max-width: 450px;
-    }
-
-    input {
-        margin-top: 5%;
-    }
-</style>
 <script>
     var action = window.document.getElementById('msg')
     var btn = window.document.getElementById('btn')
